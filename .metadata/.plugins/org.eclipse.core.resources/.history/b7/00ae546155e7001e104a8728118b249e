@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커피 주문하기</title>
+</head>
+<body>
+    
+    <h3 style="color: lightseagreen;">홍길동님의 커피 주문 내역</h3>
+
+    <ul>
+        <li>커피 : 카페라떼</li>
+        <li>타입 : hot</li>
+        <li>옵션 : shot / mild</li>
+    </ul>
+
+    <h4>자기소개</h4>
+    <p>안녕하세요?</p>
+
+</body>
+</html>

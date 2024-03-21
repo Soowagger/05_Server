@@ -1,0 +1,45 @@
+package edu.kh.servlet.controller;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+// Servlet 관련 코드를 작성하기 위해서는 반드시 HttpServlet 클래스 상속 받아야함
+
+/* @Override
+ * 어노테이션 : 컴파일러가 읽는 주석
+ * 
+ * @WebServlet  어노테이션
+ * - 해당클래스를 Servlet으로 등록하고
+ *   매핑할 주소를 연결하고 지시하라는 어노테이션
+ * 
+ * - 서버 실행 시 자동으로 web.xml에
+ *   <servlet>, <servlet-mapping> 을 작성하는 효과
+ * 
+ * 
+*/
+
+@WebServlet("/signUp")
+public class ExampleController2 extends HttpServlet {
+	
+	// POST 요청 처리 메서드 오버라이딩
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		// 원래 tomcat9 버전때는
+		// 전달받은 값을 얻어와서 확인 -> 한글이 깨지는 문제 발생!
+		// 해결방법 : 전달받은 데이터의 문자인코딩을 서버에 맞게 변경
+		req.setCharacterEncoding(LEGACY_DO_HEAD);;
+		
+		
+		
+	}
+	
+	
+	
+	
+}
