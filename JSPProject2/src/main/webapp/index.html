@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP 전용 언어/태그/객체</title>
+</head>
+<body>
+    <ul>
+        <!-- 절대 경로 ( 최상위 주소 / 기준으로 작성 ) -->
+        <li><a href="/elTest">EL(Expression Language)</a></li>
+        
+        <!-- * 절대 경로 / 상대 경로 차이 * -->
+        
+        <!-- 절대 경로 예시
+        	 localhost:8080/test/test/test 
+        	 localhost:8080/elTest
+        -->
+        
+        
+        <!-- 상대 경로 예시 
+        	 localhost:8080/test/test/test
+        	 localhost:8080/test/test/scope 
+        -->
+        
+        <!-- 상대 경로 ( 현재 주소(위치)를 기준으로 작성 -->
+        <li><a href="scope">Servlet/JSP 내장 객체와 범위(scope)</a></li>
+    </ul>
+</body>
+</html>

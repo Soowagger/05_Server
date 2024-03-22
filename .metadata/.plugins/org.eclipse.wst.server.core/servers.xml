@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Servlet Server-config" deployDir="wtpwebapps" hostname="localhost" id="Servlet Server" name="Servlet Server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="2">
-    <list key="modules" value0="ServletProject::org.eclipse.jst.jee.server:ServletProject::jst.web::6.0"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Servlet Server-config" deployDir="wtpwebapps" hostname="localhost" id="Servlet Server" name="Servlet Server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="4">
+    <list key="modules" value0="JSPProject1::org.eclipse.jst.jee.server:JSPProject1::jst.web::6.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/JSPProject1 Server-config" deployDir="wtpwebapps" hostname="localhost" id="JSPProject1 Server" name="JSPProject1 Server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="1">
+    <list key="modules" value0="JSPProject1::org.eclipse.jst.jee.server:JSPProject1::jst.web::6.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/JSPProject2 Server-config" deployDir="wtpwebapps" hostname="localhost" id="JSPProject2 Server" name="JSPProject2 Server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="1">
+    <list key="modules" value0="JSPProject2::org.eclipse.jst.jee.server:JSPProject2::jst.web::6.0"/>
   </server>
 </servers>
