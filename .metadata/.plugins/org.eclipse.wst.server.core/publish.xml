@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <publish-info>
-  <server id="Servlet Server" path="publish0.dat"/>
   <server id="JSPProject2 Server" path="publish2.dat"/>
+  <server id="TodoList Server" path="publish3.dat"/>
+  <server id="Servlet Server" path="publish0.dat"/>
   <server id="JSPProject1 Server" path="publish1.dat"/>
 </publish-info>
