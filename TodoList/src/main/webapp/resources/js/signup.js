@@ -1,0 +1,120 @@
+// console.log("signup.js loaded.");
+
+// 유효성 검사 객체
+const checkObj = { 
+    "inputId" : false, // 아이디
+    "inputPw" : false, // 비밀번호
+    "inputPwConfirm" : false, // 비밀번호 확인
+    "inputName" : false // 닉네임
+};
+
+// 아이디 유효성 검사
+const inputId = document.getElementById("inputId");
+
+inputId.addEventListener("change", function () {
+    
+    const regExp = /^[a-z][\w!@#$%^&*_-]{5,13}$/;
+    // 소문자 시작(1) + 나머지(5~13) = 6~14글자
+
+    if(regExp.test(this.value)) {
+        this.style.background = "green";
+        this.style.color = "white";
+        checkObj.inputId = true;
+    } else {
+        this.style.background = "red";
+        this.style.color = "white";
+        checkObj.inputId = false;
+    }
+});
+
+
+
+const inputPw = document.getElementById("inputPw");
+const inputPwConfirm = document.getElementById("inputPw2");
+
+// 비밀번호 입력창 공백 검사
+inputPwConfirm.addEventListener("keyup", function() {
+
+    if(inputPw.value.length == 0) {
+        this.value = "";
+        alert("비밀번호를 먼저 입력해주세요");
+        inputPw.focus();
+        checkObj.inputPw = false;
+    }
+});
+
+
+const pwMessage = document.getElementById("pwMessage");
+
+/* 비밀번호란 입력값 일치 여부 확인 */
+inputPw.addEventListener("keyup", function() {
+
+    if( inputPw.value == inputPwConfirm.value && inputPw.value.length != 0) {
+        pwMessage.innerText = "비밀번호 일치";
+        pwMessage.classList.add("confirm"); // CSS 작성 : .confirm{ color : green; }
+        pwMessage.classList.remove("error"); // CSS 작성 :  .error{ color : red; }
+        checkObj.inputPw = true;
+        checkObj.inputPwConfirm = true;
+    } else {
+        pwMessage.innerText = "비밀번호 불일치";
+        pwMessage.classList.add("error"); // CSS
+        pwMessage.classList.remove("confirm"); // CSS
+        checkObj.inputPwConfirm = false;
+    }
+});
+
+/* 비밀번호 확인란 입력값 일치 여부 확인 */
+inputPwConfirm.addEventListener("keyup", function() {
+
+    if( inputPw.value == inputPwConfirm.value && inputPw.value.length != 0) {
+        pwMessage.innerText = "비밀번호 일치";
+        pwMessage.classList.add("confirm"); // CSS 작성 : .confirm{ color : green; }
+        pwMessage.classList.remove("error"); // CSS 작성 :  .error{ color : red; }
+        checkObj.inputPw = true;
+        checkObj.inputPwConfirm = true;
+    } else {
+        pwMessage.innerText = "비밀번호 불일치";
+        pwMessage.classList.add("error"); // CSS
+        pwMessage.classList.remove("confirm"); // CSS
+        checkObj.inputPwConfirm = false;
+    }
+});
+
+
+// 닉네임 유효성 검사 (2~5 한글만)
+const inputName = document.getElementById("inputName");
+
+inputName.addEventListener("change", function() {
+    const regExp = /^[가-힣]{2,5}$/;
+
+    const nameMessage = document.getElementById("nameMessage");
+
+    if(regExp.test(this.value)) {
+        nameMessage.innerText = "정상 입력";
+        nameMessage.classList.add("confirm");
+        nameMessage.classList.remove("error");
+        checkObj.inputName = true;
+    } else {
+        nameMessage.innerText = "2글자 ~ 5글자 사이 한글만 입력하세요!";
+        nameMessage.classList.add("error");
+        nameMessage.classList.remove("confirm");
+        checkObj.inputName = false;
+    }
+});
+
+
+
+// 최종적으로 유효성 검사 객체인 checkObj안에 있는 모든 value가
+// true 인지 확인해주는 함수
+// 만약에 모두 true다 -> 서버로 submit
+// 만약에 하나라도 false다 -> 유효성 검사가 완료되지 않았습니다. 
+function validate() {
+    
+    for(let key in checkObj) {
+        if ( !checkObj[key] ) {
+            alert("유효성 검사가 완료되지 않았습니다.");
+            return false;
+        }
+    }
+    return true;
+};

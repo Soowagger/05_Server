@@ -16,15 +16,17 @@
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="edu.kh.todoList.member.model.dto.Member"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="edu.kh.todoList.todo.model.dto.Todo"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.Closeable"/>
     <fullyQualifiedTypeName name="edu.kh.todoList.common.JDBCTemplate"/>
+    <fullyQualifiedTypeName name="edu.kh.todoList.member.model.service.MemberService"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="edu.kh.todoList.todo.model.service.TodoService"/>
+    <fullyQualifiedTypeName name="edu.kh.todoList.member.model.dto.Member"/>
+    <fullyQualifiedTypeName name="edu.kh.todoList.todo.model.dto.Todo"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
 </qualifiedTypeNameHistroy>
