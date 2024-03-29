@@ -24,7 +24,7 @@
 			
 			<br>
 			
-			<button class="insert-btn">수정하기</button>
+			<button id="insert-btn">수정하기</button>
 		</form>
 	</main>
 </body>

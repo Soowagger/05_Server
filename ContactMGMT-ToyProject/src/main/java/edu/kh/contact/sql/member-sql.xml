@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	
+	
+	<!-- 로그인 -->
+	
+	<entry key="login">
+		SELECT MEMBER_NO, MEMBER_EMAIL, MEMBER_NAME, MEMBER_PHONE, TO_CHAR(MEMBER_DATE, 'YYYY"년" MM"월" DD"일" HH24"시" MI"분" SS"초"') MEMBER_DATE
+		FROM TB_MEMBER
+		WHERE MEMBER_EMAIL = ?
+		AND MEMBER_PW = ?
+		AND MEMBER_DEL_YN = 'N'
+	</entry>
+	
+	
+	<!-- sign up -->
+	<entry key="signup">
+		INSERT INTO TB_MEMBER
+		VALUES(SEQ_MEMBER_NO.NEXTVAL, ?, ?, ?, ?, DEFAULT, DEFAULT)
+	</entry>
+	
+	
+
+</properties>

@@ -28,7 +28,7 @@
 			<span id="pwMessage"></span>
 			
 			<p>닉네임</p>
-			<input type="text" name="inputName" id="inputName" required>
+			<input type="text" name="inputName" id="inputName" autocomplete="off" required>
 			<span id="nameMessage"></span>
 			<br>
 			

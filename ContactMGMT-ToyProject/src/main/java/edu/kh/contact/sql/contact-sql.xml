@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<!-- 연락처 전체 조회 -->
+	<entry key="selectAll">
+		SELECT CT_NO, CT_NAME, CT_INFO, TO_CHAR(CT_DATE, 'YYYY"년" MM"월" DD"일" HH24"시" MI"분" SS"초"') CT_DATE, STAR
+		FROM TB_CONTACT
+		WHERE MEMBER_NO = ?
+		AND CT_DEL_YN ='N'
+	</entry>
+	
+	<!-- 편집할 연락처 조회  -->
+	<entry key="selectOne">
+		SELECT CT_NO, CT_NAME, CT_INFO, CT_PHONE , 
+		TO_CHAR(CT_DATE, 'YYYY"년" MM"월" DD"일" HH24"시" MI"분" SS"초"') CT_DATE
+		FROM TB_CONTACT 
+		WHERE CT_NO = ?
+		AND MEMBER_NO = ?
+		AND CT_DEL_YN = 'N'
+	</entry>
+	
+	<!-- 연락처 수정 -->
+	<entry key="update">
+		UPDATE TB_CONTACT SET
+		CT_NAME = ?,
+		CT_INFO = ?,
+		CT_PHONE = ?	
+		WHERE CT_NO = ?
+		AND MEMBER_NO = ?
+	</entry>
+	
+	<!-- 연락처 등록 -->
+	<entry key="insert">
+		INSERT INTO TB_CONTACT
+		VALUES(SEQ_CONTACT_NO.NEXTVAL, ?, ?, DEFAULT, DEFAULT, ?, ?, DEFAULT)
+	</entry>
+	
+	<!-- 연락처 삭제 -->
+	<entry key="delete">
+		UPDATE TB_CONTACT SET
+		CT_DEL_YN = 'Y'
+		WHERE CT_NO = ?
+	</entry>
+	
+</properties>

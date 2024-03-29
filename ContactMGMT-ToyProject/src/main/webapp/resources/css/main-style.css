@@ -15,15 +15,28 @@
 }
 
 main {
-    border: 1px solid red;
     background-color : black;
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    
+}
+
+main div:nth-child(1) {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 10%;
+}
+
+main div:nth-child(2) {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    margin-bottom: 150px;
+    flex-basis: 90%;
 }
 
 .signup-main {
@@ -35,10 +48,8 @@ main {
     color: black;
     padding: 10px;
     border-radius: 5px;
-    text-decoration: none;
+    
 }
-
-
 
 .signup-btn {
     font-weight: bold;
@@ -46,6 +57,239 @@ main {
     cursor: pointer;
     padding: 10px;
     background-color: lightblue;
+    
+    border-radius: 5px;
+}
+
+
+/* ===================== 회원가입 ===================== */
+
+
+
+.signup-form, .login-form, .update-form, .insert-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+
+#inputEmail {
+    width: 100%;
+    border: none;
+    
+}
+
+.signup-form input {
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.update-form input {
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;    
+}
+
+.insert-form input {
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;    
+}
+
+/* 로그인 인풋 */
+.login-form input {
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* 회원가입 폼 p태그 */
+.signup-form p {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+/* 로그인 폼 p 태그 */
+.login-form p {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* 수정 폼 p 태그 */
+.update-form p  {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* 등록 폼 p 태그 */
+.insert-form p  {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#pwMsg, #nameMsg {
+    font-size: 16px;
+    color: lightgray;
+}
+
+
+
+#signup-btn {
+	font-size: 22px;
+	background-color: red;
+	border: none;
+	margin-top: 20px;
+	cursor: pointer;
+	height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#update-btn {
+    font-size: 22px;
+	background-color: lightblue;
+	border: none;
+	margin-top: 20px;
+	cursor: pointer;
+	height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#insert-btn {
+    font-size: 22px;
+	background-color: red;
+	border: none;
+	margin-top: 20px;
+	cursor: pointer;
+	height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#login-form-btn {
+    font-size: 22px;
+	background-color: red;
+	border: none;
+	margin-top: 20px;
+	cursor: pointer;
+	height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.confirm{ color : greenyellow !important; } 
+.error{ color : red !important; }
+
+
+
+/* 로그인 성공 후  */
+
+
+/* .insert-div {
+    display: flex;
+    justify-content: center;
+    align-items: center
+} */
+
+.insert-btn {
+
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    margin-right: 40px;
+    font-size: 18px;
+    
+    
+}
+
+
+.login-btn {
+
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 40px;
+    font-size: 18px;
+
+}
+
+.logout-btn {
+
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 40px;
+    font-size: 18px;
+
+}
+
+
+table {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 20px 26px;
+    
+    border: none;
+}
+
+th {
+    font-size: 24px;
+}
+
+td {
+    font-size: 18px;
+}
+
+tr, th {
+    border-bottom: 1px solid lightblue;
+}
+
+
+.update-btn {
+    text-decoration: none;
+    padding: 6px 16px;
+    background-color: lightblue;
+    border-radius: 3px;
+    color: blue;
+    font-size: 16px;
+}
+
+.delete-btn {
+    text-decoration: none;
+    padding: 6px 16px;
+    background-color: lightpink;
+    border-radius: 3px;
+    margin-right: 3px;
+    color: red;
+    font-size: 16px;
+}
+
+
+.star {
+
+    cursor: pointer;
+    font-size: 24px;
+    text-decoration: none;
 }
